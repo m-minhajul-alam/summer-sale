@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- tailwindcss custom configaration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-bg': '#E527B2',
+                        'banner-bg': '#F9F6E2',
+                    }
+                }
+            }
+        }
+    </script>
+
     <!-- raw css styles -->
     <style>
         .font-work-sans {
@@ -25,7 +40,20 @@
 
 <body class="font-work-sans">
     <header>
-
+        <section class="bg-banner-bg py-10">
+            <div class="max-w-screen-xl mx-auto flex justify-center items-center">
+                <div class="text-center flex-1">
+                    <h5 class="text-black text-3xl font-medium pb-11">---SALE FEVER---</h5>
+                    <h1 class="text-black text-6xl font-bold pb-16">Purchase TK 200 or <br>
+                        above & get <span class="text-primary-bg">20% off</span></h1>
+                    <h6 class="text-black text-2xl font-medium">Use Promo Code <span
+                            class="bg-primary-bg text-white py-3 px-5 rounded-lg">SELL200</span></h6>
+                </div>
+                <div class="flex-1">
+                    <img src="images/Summer 1.png" alt="Summer-Sale-Banner">
+                </div>
+            </div>
+        </section>
     </header>
     <main>
 
