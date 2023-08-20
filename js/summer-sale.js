@@ -26,3 +26,30 @@ function clickedCard(card) {
         }
     }
 }
+
+function calculateDiscount(totalPrice) {
+
+    const doscount = ((totalPrice * 20) / 100);
+    const totalDoscount = doscount.toFixed(2);
+    document.getElementById('discount').innerText = totalDoscount;
+
+    const discountPrice = totalPrice - doscount;
+    const totalDiscountPrice = discountPrice.toFixed(2);
+    document.getElementById('total').innerText = totalDiscountPrice;
+
+
+}
+
+document.getElementById('coupon-btn').addEventListener('click', function () {
+    const inputField = document.getElementById('input-field');
+    const inputValue = inputField.value;
+    // console.log(inputValue);
+    if (inputValue !== 'SELL200') {
+        alert('coupon is not valid')
+        return;
+    } else {
+        const totalPriceString = document.getElementById('total-price').innerText;
+        const totalPrice = parseFloat(totalPriceString);
+        calculateDiscount(totalPrice);
+    }
+})
