@@ -6,7 +6,7 @@ function clickedCard(card) {
     const itemName = card.childNodes[3].childNodes[3].innerText;
 
     const li = document.createElement('li');
-    li.innerHTML = `${count + 1} ${itemName}`;
+    li.innerHTML = `${count + 1}. ${itemName}`;
 
     selectedItems.appendChild(li);
     li.classList.add('my-3')
@@ -17,6 +17,7 @@ function clickedCard(card) {
     const totalInDecimal = total.toFixed(2);
 
     document.getElementById('total-price').innerText = totalInDecimal;
+    document.getElementById('total').innerText = totalInDecimal;
 
     if (totalInDecimal > 0) {
         document.getElementById('purchase-btn').removeAttribute("disabled");
@@ -26,6 +27,7 @@ function clickedCard(card) {
         }
     }
 }
+
 
 function calculateDiscount(totalPrice) {
 
@@ -52,4 +54,8 @@ document.getElementById('coupon-btn').addEventListener('click', function () {
         const totalPrice = parseFloat(totalPriceString);
         calculateDiscount(totalPrice);
     }
+})
+
+document.getElementById('modal-btn').addEventListener('click', function () {
+    location.href = 'index.html';
 })
