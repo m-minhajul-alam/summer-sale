@@ -292,10 +292,23 @@
                         <p class="text-black text-2xl font-medium py-2">Total: <span
                                 class="text-font-two-color"><span>205.60</span> TK</span></p>
                         <hr class="py-3">
+
                         <button
                             class="btn w-full bg-btn-bg hover:bg-btn-bg text-white text-xl font-semibold px-11 py-2 disabled:bg-slate-100 disabled:cursor-no-drop"
-                            disabled>Make
+                            disabled onclick="my_modal_5.showModal()">Make
                             Purchase</button>
+                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-center">
+                            <form method="dialog" class="modal-box p-24">
+                                <img class="mx-auto" src="images/congo.png" alt="">
+                                <h3 class="text-black text-3xl font-bold pt-8">Congratulations</h3>
+                                <p class="text-font-two-color text-xl font-normal py-4">Your Purchase the product</p>
+                                <div class="modal-action">
+                                    <button
+                                        class="btn bg-btn-bg hover:bg-btn-bg text-white text-xl font-semibold mx-auto">Go
+                                        Home</button>
+                                </div>
+                            </form>
+                        </dialog>
                     </div>
                 </div>
             </div>
